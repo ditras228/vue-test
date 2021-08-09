@@ -15,6 +15,7 @@
       <div class="total">
         <my-line v-for="item in items"
                  :item="item"
+                 :value="true"
                  :key="item.id"/>
       </div>
 
@@ -184,7 +185,7 @@ export default {
       width: 453px;
     }
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 420px){
   .modal{
     position: relative;
     left: 0;

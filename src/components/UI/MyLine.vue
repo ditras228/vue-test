@@ -1,6 +1,6 @@
 <template>
   <div class="line">
-    <my-checkbox :value="value"/>
+    <my-checkbox :value="checkbox"/>
     <div><span class="mark">{{item.value}} рублей</span> в {{ item.id+1 }} год</div>
   </div>
 </template>
@@ -10,8 +10,8 @@
 export default {
   name: 'my-line',
   props:{
+    checkbox: [],
     item:{
-      value:true,
       type: Object,
       required: true
     }

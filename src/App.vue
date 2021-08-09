@@ -41,6 +41,7 @@ body{
   background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
   border-radius: 0;
   font-family: Roboto,sans-serif;
+  overflow: hidden;
 }
 .canvas{
   display: grid;
