@@ -24,5 +24,15 @@ export default {
   color: #FFFFFF;
 
   cursor: pointer;
+  transition: 0.3s
+}
+.btn:hover{
+  background: #EA0029
+}
+.btn:active{
+  backgorund: #EA0029
+}
+.btn:disabled{
+  background: #BEC5CC
 }
 </style>

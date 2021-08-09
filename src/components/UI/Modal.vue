@@ -21,7 +21,7 @@
       <div class="settings">
         <div>Что уменьшаем?</div>
         <div class="settings_btns">
-          <button-rounded>Платеж</button-rounded>
+          <button-rounded :disabled="true">Платеж</button-rounded>
           <button-rounded-white class="btn_rounded">Срок</button-rounded-white>
         </div>
 
@@ -124,6 +124,8 @@ export default {
   position: absolute;
   right: 27px;
   top: 27px;
+
+  cursor: pointer;
 }
 
 .title {
@@ -137,10 +139,14 @@ export default {
 
 .tittle_red {
   color: #EA0029;
-}
+  }
 
-.tittle_red {
+.tittle_red:hover {
   cursor: pointer;
+  color: #F53A31;
+}
+.tittle_red:active{
+  color: #EA0029;
 }
 
 .input {
