@@ -1,26 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <div class="canvas">
+   <main-button style="margin: 0 auto" @click="setVisible">Налоговый вычет</main-button>
+   <modal v-model:show="dialogVisible"/>
+ </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Modal from './components/UI/Modal'
+import MainButton from "./components/UI/MainButton";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  components:{
+    Modal,
+    MainButton,
+  },
+  data(){
+    return {
+      dialogVisible: false
+    }
+  },
+
+  methods:{
+    setVisible(){
+      this.dialogVisible=true
+    }
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-size:14px
+}
+button{
+  border-color: unset;
+  border-style: unset;
+}
+body{
+  background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+  border-radius: 0;
+  font-family: Roboto,sans-serif;
+}
+.canvas{
+  display: grid;
+  height: 100vh;
 }
 </style>
