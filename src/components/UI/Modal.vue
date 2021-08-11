@@ -156,6 +156,8 @@ export default {
 
 .total {
   margin-bottom: 20px;
+  overflow: auto;
+  max-height: 220px;
 }
 
 .settings {
